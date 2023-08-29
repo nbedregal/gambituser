@@ -1,12 +1,13 @@
 package models
 
 type SecretRDSJson struct {
-	Username            string `json:"username"`
-	Password            string `json:"password"`
-	Engine              string `json:"engine"`
-	Host                string `json:"host"`
-	Post                int    `json:"port"`
-	DbClusterIdentifier string `json:"dbclusteridentifier"`
+	Username             string `json:"username"`
+	Password             string `json:"password"`
+	Engine               string `json:"engine"`
+	Host                 string `json:"host"`
+	Port                 int    `json:"port"`
+	Dbname               string `json:"dbname"`
+	DbInstanceIdentifier string `json:"dbInstanceIdentifier"`
 }
 
 type SignUp struct {
