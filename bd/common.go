@@ -20,7 +20,7 @@ func ReadSecret() error {
 }
 
 func DbConnect() error {
-	Db, err := sql.Open("mysql", ConnStr(SecretModel))
+	Db, err = sql.Open("mysql", ConnStr(SecretModel))
 	if err != nil {
 		fmt.Println(err.Error())
 		return err
@@ -41,7 +41,8 @@ func ConnStr(claves models.SecretRDSJson) string {
 	dbUser = claves.Username
 	authToken = claves.Password
 	dbEndpoint = claves.Host
-	dbName = "gambit"
-	dsn := fmt.Sprintf("%s:%s@tpc(%s)/%s?allowCleartextPasswords=true", dbUser, authToken, dbEndpoint, dbName)
+	dbName = "Gambit"
+	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?allowCleartextPasswords=true", dbUser, authToken, dbEndpoint, dbName)
+	fmt.Println(dsn)
 	return dsn
 }

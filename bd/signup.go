@@ -3,6 +3,7 @@ package bd
 import (
 	"fmt"
 
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/nbedregal/gambituser/models"
 	"github.com/nbedregal/gambituser/tools"
 )
@@ -20,7 +21,7 @@ func SignUp(sig models.SignUp) error {
 
 	_, err = Db.Exec(sentencia)
 	if err != nil {
-		fmt.Println(err.Error())
+		fmt.Println("acá", err.Error())
 		return err
 	}
 	fmt.Println("Signup exitoso")
