@@ -17,6 +17,10 @@ func main() {
 	lambda.Start(EjecutoLambda)
 }
 
+/**
+* Función principal de ejecución lambda, que recive el contexto
+* y el evento de confirmación luego de un signup en la UI.
+ */
 func EjecutoLambda(ctx context.Context, event events.CognitoEventUserPoolsPostConfirmation) (events.CognitoEventUserPoolsPostConfirmation, error) {
 
 	awsgo.InicializoAWS()
@@ -51,6 +55,10 @@ func EjecutoLambda(ctx context.Context, event events.CognitoEventUserPoolsPostCo
 
 }
 
+/**
+* Función que valida la variable de sistema definido en
+* la función lambda exista.
+ */
 func ValidoParametros() bool {
 	var traeParametro bool
 	_, traeParametro = os.LookupEnv("SecretName")

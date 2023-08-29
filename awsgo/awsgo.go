@@ -11,6 +11,10 @@ var Ctx context.Context
 var Cfg aws.Config
 var err error
 
+/**
+* Función para obtener la configuración de AWS
+* usando el contexto y apuntando a una región.
+ */
 func InicializoAWS() {
 	Ctx = context.TODO()
 	Cfg, err = config.LoadDefaultConfig(Ctx, config.WithDefaultRegion("us-east-1"))

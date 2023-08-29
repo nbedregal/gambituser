@@ -10,6 +10,10 @@ import (
 	"github.com/nbedregal/gambituser/models"
 )
 
+/**
+* Función que recibe nombre del secreto y retorna los datos
+* desde Secrets Manager.
+ */
 func GetSecret(nombreSecret string) (models.SecretRDSJson, error) {
 	var datosSecret models.SecretRDSJson
 	fmt.Println(" > Pido secreto " + nombreSecret)

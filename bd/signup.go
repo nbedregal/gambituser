@@ -8,6 +8,9 @@ import (
 	"github.com/nbedregal/gambituser/tools"
 )
 
+/**
+* Función para registrar el usuario en la base de datos.
+ */
 func SignUp(sig models.SignUp) error {
 	fmt.Println("Comienza registro")
 	err := DbConnect()

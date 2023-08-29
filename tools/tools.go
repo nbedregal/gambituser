@@ -5,6 +5,9 @@ import (
 	"time"
 )
 
+/**
+* Función para formatear la fecha a formato SQL.
+ */
 func FechaMySQL() string {
 	t := time.Now()
 	return fmt.Sprintf("%d-%02d-%02dT%02d:%02d:%02d",
